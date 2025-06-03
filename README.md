@@ -1,6 +1,6 @@
 # vcgb
 
-A boilerplate structure for creating OpenGL + GLFW projects using VSCode.
+A boilerplate structure for creating OpenGL + GLFW projects using VSCode.  
 _vcgb stands for VSCode GLFW Boilerplate._
 
 ### Important
