@@ -9,8 +9,11 @@ int main() {
         return -1;
     }
 
+    int major, minor, rev;
+    glfwGetVersion(&major, &minor, &rev);
+
     std::cout << "The boilerplate is working as expected, using the following:" << std::endl;
-    std::cout << glfwGetVersion << std::endl;
+    std::cout << "GLFW v." << major << "." << minor << "." << rev << std::endl;
 
     glfwTerminate();
     return 0;
