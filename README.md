@@ -2,6 +2,14 @@
 
 A boilerplate structure for creating OpenGL + GLFW projects using VSCode.
 
+### Important
+
+By default I am using Visual Studio 2022 Community Compiler Toolchain (MSVC kit) to run in VSCode.
+
+If you don’t have Visual Studio installed, you can use other compilers like MinGW-w64 or CLang/GCC.
+
+Ensure that you select the appropriate CMake kit in VSCode to match your installed compiler (see in Setup #3 step A), then configure, build, and run the project as usual.
+
 ## Features
 
 - Uses CMake for project configuration and build management.
@@ -35,7 +43,7 @@ A boilerplate structure for creating OpenGL + GLFW projects using VSCode.
 
     > With VSCode open on the project, press `Ctrl + Shift + P` and:
 
-    a) Select the desired CMake kit (e.g. Visual Studio 2022 Release x64);  
+    a) Select the desired CMake kit (in this case, we use MVSC, which is named Visual Studio 2022 Release);  
     b) Run **CMake Configure** (only needed once or after modifying CMakeLists.txt);  
     c) Run **CMake Build**;  
     d) Press **F5** to launch the executable.
