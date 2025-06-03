@@ -10,14 +10,29 @@ set(CMAKE_CXX_STANDARD 17)
 add_subdirectory(external/glfw)
 include_directories(external/glfw/include)
 
+# Include GLAD manually
+add_library(glad STATIC external/glad/src/glad.c)
+target_include_directories(glad PUBLIC external/glad/include)
+
 # Your source files
 file(GLOB_RECURSE SOURCES src/*.cpp)
 
 # Create executable
 add_executable(ProjectName ${SOURCES})
 
-# Link GLFW
-target_link_libraries(ProjectName PRIVATE glfw)
+# Include directories
+target_include_directories(ProjectName
+  PUBLIC
+    external/glad/include
+    external/glfw/include
+)
+
+# Link libraries
+target_link_libraries(ProjectName
+  PRIVATE
+    glad
+    glfw
+)
 
 # Optional: Link with OpenGL
 find_package(OpenGL REQUIRED)

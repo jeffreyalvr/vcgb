@@ -1,7 +1,7 @@
 # vcgb
 
-A boilerplate structure for creating OpenGL + GLFW projects using VSCode.  
-_vcgb stands for VSCode GLFW Boilerplate._
+A boilerplate structure for creating OpenGL + GLAD + GLFW projects using VSCode.  
+_vcgb stands for VSCode GLFW/glad Boilerplate._
 
 ### Important
 
@@ -15,6 +15,7 @@ Ensure that you select the appropriate CMake kit in VSCode to match your install
 
 - Uses CMake for project configuration and build management.
 - Includes GLFW as a Git submodule.
+- Includes GLAD 4.6 as a normal module.
 - Preconfigured `.vscode` folder with launch and build tasks for convenience.
 
 ## Getting Started
@@ -32,6 +33,10 @@ Ensure that you select the appropriate CMake kit in VSCode to match your install
     ```bash
     git submodule update --init --recursive
     ```
+
+    > 💡 GLAD is already included as a normal module in `external/`.
+    > If you want to use a different version or OpenGL loader, you can safely delete the `glad/` folder and replace it.
+    > Of course, you'd need to modify `CMakeLists.txt` to match your changes.
 
 2.  **Install the following extensions:**
 
@@ -59,6 +64,7 @@ vcgb/
 │   └── launch.json          # VSCode launch config
 ├── external/
 │   └── glfw/                # GLFW as a git submodule
+│   └── glad/                # GLAD (using OpenGL 4.6) as a normal module
 ├── src/
 │   └── main.cpp             # Main application code
 ├── CMakeLists.txt           # Project build instructions
