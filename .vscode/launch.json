@@ -1,0 +1,16 @@
+{
+  "version": "0.1.0",
+  "configurations": [
+    {
+      "name": "Run project executable using Cmake",
+      "type": "cppvsdbg",
+      "request": "launch",
+      "program": "${command:cmake.launchTargetPath}",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "console": "integratedTerminal"
+    }
+  ]
+}
