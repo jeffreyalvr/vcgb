@@ -32,7 +32,7 @@ add_executable(ProjectName
 )
 
 # Include paths
-target_include_directories(Teste
+target_include_directories(ProjectName
     PUBLIC
         ${CMAKE_CURRENT_SOURCE_DIR}
 )
