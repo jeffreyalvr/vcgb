@@ -55,9 +55,9 @@ bool Window::init() {
     int major, minor, rev;
     glfwGetVersion(&major, &minor, &rev);
 
-    /* std::cout << "The boilerplate is working as expected, using the following:" << std::endl;
+    std::cout << "The boilerplate is working as expected, using the following:" << std::endl;
     std::cout << "GLFW v." << major << "." << minor << "." << rev << std::endl;
-    std::cout << "OpenGL v." << glGetString(GL_VERSION) << std::endl; */
+    std::cout << "OpenGL v." << glGetString(GL_VERSION) << std::endl;
 
     return true;
 }
