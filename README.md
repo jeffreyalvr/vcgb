@@ -52,9 +52,10 @@ Ensure that you select the appropriate CMake kit in VSCode to match your install
     a) Select the desired CMake kit (in this case, we use MVSC, which is named Visual Studio 2022 Release);  
     b) Run **CMake Configure** (only needed once or after modifying CMakeLists.txt);  
     c) Run **CMake Build**;  
-    d) Press **F5** to launch the executable.
+    d) Press Ctrl+Shift+P or Cmd+Shift+P and type **CMake Run Without Debugging** (you can get the shortcut or modify it later).
 
     _ℹ️ Tip: You can customize the launch behavior in '.vscode/launch.json'._
+    _MacOS uses the same configuration as Linux._
 
 ### Boilerplate Structure
 
@@ -63,11 +64,13 @@ vcgb/
 ├── .vscode/
 │   └── launch.json          # VSCode launch config
 ├── external/
-│   └── glfw/                # GLFW as a git submodule
+│   ├── glfw/                # GLFW as a git submodule
 │   └── glad/                # GLAD (using OpenGL 4.6) as a normal module
 ├── src/
-│   └── main.cpp             # Main application code
+│   ├── Window.cpp           # Window source file
+│   └── Window.h             # Window header file
 ├── CMakeLists.txt           # Project build instructions
 ├── README.md                # Project documentation
-└── LICENSE                  # Open-source license
+├── LICENSE                  # Open-source license
+└── main.cpp                 # Main application code
 ```
